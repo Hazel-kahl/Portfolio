@@ -1,0 +1,392 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+    background-color: black;
+    /* overflow: hidden; */
+}
+
+#header {
+    width: 100%;
+    height: 100vh;
+}
+
+.container {
+    padding: 10px 0;
+}
+
+.logo {
+    display: flex;
+    font-size: 40px;
+    font-weight: 700;
+    color: #573583;
+    letter-spacing: 3px;
+    margin-top: 30px;
+}
+
+.logo b {
+    font-size: 50px;
+    color: #00deff;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    position: relative;
+}
+
+nav ul li a::after {
+    content:'';
+    width: 0;
+    height: 3px;
+    background: #ffcc00;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after {
+    width:100%;
+}
+
+.header-text {
+    margin-top: 20%;
+    font-size: 30px;
+    flex-basis: 55%;
+}
+
+.header-text h1 {
+    font-size: 60px;
+    font-weight: 600;
+    margin-top: 20px;
+    color: #fff;
+}
+
+.header-text h1 span{
+    color: #ffcc00; 
+}
+
+.header-text p{
+    color: #fff; 
+}
+
+.header-pic{
+    flex-basis: 40%;
+}
+
+.header-pic img {
+    width:100%;
+    border-radius: 0.9rem;
+    margin-bottom: 50px;
+}
+
+/* -----------------about css ---------------*/
+#about {
+    padding: 80px 0;
+    color: #ababab;
+    background-color: #050809;
+    /* z-index: 3; */
+    margin-top: 130px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.abt-col1 {
+    flex-basis: 35%;
+}
+
+.abt-col1 img {
+    width: 100%;
+    border-radius: 0.9rem;
+}
+
+.abt-col2 {
+    flex-basis: 60%;
+}
+
+.sub-title {
+    font-size: 3.15rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+.tab-titles {
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.tab-titles p {
+    color: #573583;
+    /* 603F8B */
+}
+
+.tab-links {
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after {
+    content: '';
+    width:0;
+    height: 3px;
+    background: #ffcc00;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.tab-links.active-link::after {
+    width: 50%;
+}
+
+.tab-contents ul li {
+    list-style: none;
+    margin: 10px 0;
+}
+
+.tab-contents ul li span {
+    color:#00deff;
+    font-size: 14px;
+}
+
+.tab-contents {
+    display: none; 
+    padding-left: 0;
+}
+
+.tab-contents.skill-tab {
+    display: block;
+}
+
+/* -----------------portfolio section ------------------*/
+#portfolio {
+    padding: 30px 0;
+}
+
+.portfolio-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.portfolio-list p {
+    font-size: 0.8rem;
+    color: #ababab;
+    font-weight: 400;
+}
+
+.portfolio-list div {
+    background: #262626;
+    padding: 40px;
+    font-size: 20px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
+}
+
+.portfolio-list div i {
+    font-size: 35px;
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+.portfolio-list div h2 {
+    font-size: 1.9rem;
+    font-weight: 500;
+    margin-bottom: 0.9rem;
+    color: #fff;
+}
+
+.portfolio-list div a {
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: 20px;
+    display: inline-block;
+    color: #573583;
+}
+
+.portfolio-list div:hover {
+    background: #FFD700;
+    transform: translateY(-10px);
+}
+
+/* --------------contact me section ------------- */
+.contact-left {
+    flex-basis: 35%;
+}
+
+.contact-left p {
+    margin-top: 30px;
+    color: #fff;
+}
+
+.contact-left p i {
+    color: #00deff; 
+    margin-right: 15px;
+    font-size: 25px;
+}
+
+.contact-right {
+    flex-basis: 60%;
+}
+
+.contact-right form{
+    width: 100%;
+}
+
+form input, form textarea {
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+.btn {
+    display:block;
+    margin: 50px auto;
+    width:fit-content;
+    border: 1px solid #ffcc00;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    transition: background 0.5s;
+}
+
+.btn:hover {
+    background: #ffcc00;
+    
+}    
+
+.btn.btn2 {
+    display: inline-block;
+    background: #ffcc00;
+}
+
+form .btn2 {
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+/* ---------footer---------- */
+footer {
+    text-align: center;
+    width: 100%;
+    font-weight: 300;
+    padding: 30px 0;
+    margin-top: 20px;
+    color: #fff;
+}
+
+
+/* ------css for responsive website------- */
+
+nav .fa-solid {
+    display: none;
+}
+
+@media only screen and (max-width:600px){
+    body {
+        margin: 50px; 
+    }
+    .header-text, .header-pic {
+        flex-basis: 100%;
+        margin-bottom: 50px;
+    }
+    .header-text p{
+        font-size: 16px;
+    }
+    .header-text h1{
+        font-size: 25px;
+    }
+    nav .fa-solid {
+        display: block;
+        font-size: 25px;
+    }
+    nav ul {
+        background: #ffcc00;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    nav ul li {
+        display: block;
+        margin: 25px;
+    }
+    nav ul .fa-solid {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    .sub-title {
+        font-size: 40px;
+    }
+    .abt-col1, .abt-col2 {
+        flex-basis: 100%;
+    }
+    .abt-col1 {
+        margin-bottom: 30px;
+        margin-top: 200px;
+    }
+    /* .abt-col2 h1 {
+        font-size: 25px;
+    } */
+    .description {
+        font-size: 12px;
+    }
+    .tab-links {
+        font-size: 16px;
+        margin-right: 20px;
+    }
+    .contact-left, .contact-right {
+        flex-basis: 100%;
+    }
+    footer {
+        font-size: 14px;
+        width: 100%;
+    }
+}
