@@ -306,6 +306,11 @@ form .btn2 {
     cursor: pointer;
 }
 
+#msg {
+    color: #00deff;
+    display: block;
+}
+
 /* ---------footer---------- */
 footer {
     text-align: center;
