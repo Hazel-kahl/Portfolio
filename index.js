@@ -23,6 +23,23 @@
             sidemenu.style.right = "-200px";
         }
 
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbztsPdYqoICJ0DXzlgLS6ZvXsJrWRaO46csfwRj6hFjzZagkNo2ow9NBMW1Wo_IQjkb/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg");
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "Alrighty! Your message have been sent successfully"
+                setTimeout(function(){
+                    msg.innerHTML = ""
+                },5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+
 
         // myDiv.addEventListener('click', (event) => {
         //     event.currentTarget.getAttribute("first-skill"); 
